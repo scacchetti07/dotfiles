@@ -1,0 +1,190 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[](color_blue)\
+$os\
+$username\
+[](bg:color_magenta fg:color_blue)\
+$directory\
+[](fg:color_magenta bg:color_cyan_alt)\
+$git_branch\
+$git_status\
+[](fg:color_cyan_alt bg:color_cyan)\
+$c\
+$cpp\
+$rust\
+$golang\
+$nodejs\
+$php\
+$java\
+$kotlin\
+$haskell\
+$python\
+[](fg:color_cyan bg:color_black)\
+$docker_context\
+$conda\
+$pixi\
+[](fg:color_black bg:color_bg2)\
+$time\
+[ ](fg:color_bg2)\
+$line_break$character"""
+
+palette = 'tokyo_night_dark'
+
+[palettes.tokyo_night_dark]
+color_red        = '#d16478'
+color_orange     = '#d88655'
+color_yellow     = '#be9458'
+color_grey_1     = '#afaaa4'
+color_green      = '#86af5a'
+color_teal       = '#61b9ab'
+color_blue_light = '#99d3d2'
+color_cyan       = '#23a5bc'
+color_cyan_alt   = '#6aafd8'
+color_blue       = '#6789d1'
+color_magenta    = '#9e82d1'
+color_white      = '#a3abd0'
+color_fg0        = '#8f96b5'
+color_fg1        = '#828caf'
+color_fg2        = '#e3e5e5' # Starship TokyoNight theme
+color_comment    = '#495074'
+color_black      = '#373d58'
+color_bg2        = '#1e2232'
+color_bg1        = '#161620'
+
+
+[os]
+disabled = false
+style = "bg:color_blue fg:color_fg2"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+EndeavourOS = ""
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+Pop = ""
+
+[username]
+show_always = true
+style_user = "bg:color_blue fg:color_fg2"
+style_root = "bg:color_blue fg:color_fg2"
+format = '[ $user ]($style)'
+
+[directory]
+style = "fg:color_fg2 bg:color_magenta"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[git_branch]
+symbol = ""
+style = "bg:color_cyan_alt"
+format = '[[ $symbol  $branch ](fg:color_fg2 bg:color_cyan_alt)]($style)'
+
+[git_status]
+style = "bg:color_cyan_alt"
+format = '[[($all_status$ahead_behind )](fg:color_fg2 bg:color_cyan_alt)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:bg:color_cyan"
+format = '[[ $symbol( $version) ](fg:color_fg2 bg:bg:color_cyan)]($style)'
+
+[c]
+symbol = " "
+style = "bg:color_cyan"
+format = '[[ $symbol( $version) ](fg:color_fg2 bg:bg:color_cyan)]($style)'
+
+[cpp]
+symbol = " "
+style = "bg:color_cyan"
+format = '[[ $symbol( $version) ](fg:color_fg2 bg:bg:color_cyan)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:color_cyan"
+format = '[[ $symbol( $version) ](fg:color_fg2 bg:bg:color_cyan)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:color_cyan"
+format = '[[ $symbol( $version) ](fg:color_fg2 bg:bg:color_cyan)]($style)'
+
+[php]
+symbol = ""
+style = "bg:color_cyan"
+format = '[[ $symbol( $version) ](fg:color_fg2 bg:bg:color_cyan)]($style)'
+
+[java]
+symbol = ""
+style = "bg:color_cyan"
+format = '[[ $symbol( $version) ](fg:color_fg2 bg:bg:color_cyan)]($style)'
+
+[kotlin]
+symbol = ""
+style = "bg:color_cyan"
+format = '[[ $symbol( $version) ](fg:color_fg2 bg:bg:color_)]($style)'
+
+[haskell]
+symbol = ""
+style = "bg:color_cyan"
+format = '[[ $symbol( $version) ](fg:color_fg2 bg:bg:color_)]($style)'
+
+[python]
+symbol = ""
+style = "bg:color_cyan"
+format = '[[ $symbol( $version) ](fg:color_fg2 bg:bg:color_)]($style)'
+
+[docker_context]
+symbol = ""
+style = "bg:color_bg3"
+format = '[[ $symbol( $context) ](fg:color_fg0 bg:color_bg3)]($style)'
+
+[conda]
+style = "bg:color_bg3"
+format = '[[ $symbol( $environment) ](fg:color_fg0 bg:color_bg3)]($style)'
+
+[pixi]
+style = "bg:color_bg3"
+format = '[[ $symbol( $version)( $environment) ](fg:color_fg0 bg:color_bg3)]($style)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:color_white"
+format = '[[  $time ](fg:color_fg1 bg:color_bg2)]($style)'
+
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+success_symbol = '[](bold fg:color_magenta)'
+error_symbol = '[](bold fg:color_red)'
+vimcmd_symbol = '[](bold fg:color_green)'
+vimcmd_replace_one_symbol = '[](bold fg:color_magenta)'
+vimcmd_replace_symbol = '[](bold fg:color_magenta)'
+vimcmd_visual_symbol = '[](bold fg:color_yellow)'

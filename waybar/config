@@ -1,0 +1,117 @@
+{
+"include": [
+  "$HOME/.config/waybar/Modules",
+  "$HOME/.config/waybar/ModulesWorkspaces",
+  "$HOME/.config/waybar/ModulesCustom",
+  "$HOME/.config/waybar/ModulesGroups",
+  "$HOME/.config/waybar/UserModules",
+  ],
+"layer": "top",
+//"mode": "dock",
+"exclusive": true,
+"passthrough": false,
+"position": "top",
+//"spacing": 6,
+"fixed-center": true,
+"ipc": true,
+//"margin-top": 3,
+//"margin-left": 8,
+//"margin-right": 8,
+
+"modules-left": [
+  "custom/arch",
+	"custom/separator#blank_2",
+	"hyprland/workspaces#rw",
+	"custom/separator#blank_2",
+	"group/notify",
+	"custom/cava_mviz",
+	],
+"modules-center": [
+	"clock",
+	"custom/weather",
+	"mpris"
+	],
+"modules-right": [
+	"tray",
+	"network#speed",
+	"custom/separator#blank",
+	"group/laptop",
+	"custom/separator#blank",
+	"group/mobo_drawer",
+	"custom/separator#blank",
+	"group/audio",
+	"custom/separator#blank",
+	"bluetooth",
+	"custom/separator#blank",
+	"group/status",
+	],
+
+// Additional / Edited Waybar Modules //
+"custom/arch": {
+      "format":"󰣛 ",
+      "tooltip": false,
+      "on-click": "wofi --show=drun"
+},
+"cpu#forest": {
+	"format": "Cpu  󰍛  {usage}%",
+	"interval": 1,
+	"min-length": 5,
+	"format-alt-click": "click",
+	"format-alt": "{icon0}{icon1}{icon2}{icon3} {usage:>2}% 󰍛",
+	"format-icons": [
+		"▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"
+	],
+	"on-click-right": "gnome-system-monitor",
+},
+
+"disk#forest": {
+	"interval": 30,
+	//"format": "Disk    󰋊",
+	"path": "/",
+	//"format-alt-click": "click",
+	"format": "Disk 󰋊  {used}",
+  "on-click-right": "baobab",
+//	"tooltip": true,
+//	"tooltip-format": "Disk    {used} used out of {total} on {path} ({percentage_used}%)",
+},
+
+"memory#forest": {
+	"interval": 10,
+	"format": "Ram  󰾆  {used:0.1f}G",
+	"format-alt": "Ram    {percentage}%    󰾆",
+	"format-alt-click": "click",
+	"tooltip": true,
+	"tooltip-format": "Ram    {used:0.1f}GB/{total:0.1f}G",
+	"on-click-right": "kitty --title btop sh -c 'btop'"
+},
+"temperature#forest": {
+	"interval": 10,
+	"tooltip": true,
+	"hwmon-path": [
+		"/sys/class/hwmon/hwmon1/temp1_input",
+		"/sys/class/thermal/thermal_zone0/temp"
+	],
+	//"thermal-zone": 0,
+	"critical-threshold": 82,
+	"format-critical": "Temp {icon}  {temperatureC}°C",
+	"format": "Temp {icon}  {temperatureC}°C",
+	"format-icons": [
+		" 󰈸"
+	],
+	"on-click-right": "kitty --title nvtop sh -c 'nvtop'"
+},
+"mpris#forest": {
+    "interval": 10,
+    "format": "{player_icons} ",
+	"player-icons": {
+		"spotify": "",
+		"firefox": "",
+		"default": "󰎆"
+	},
+	"tooltip": true,
+    "tooltip-format": "{status} {title} - {artist} | {album}"
+
+}
+
+
+}

@@ -1,0 +1,118 @@
+@define-color red               #f7768e; /* Keywords, HTML elements, Regex groups, CSS units */
+@define-color orange            #ff9e64; /* Number and Boolean constants, Language support constants */
+@define-color yellow            #e0af68; /* Function parameters, Regex character sets */
+@define-color gray_param        #cfc9c2; /* Parameters inside functions (semantic) */
+@define-color green             #9ece6a; /* Strings, CSS class names */
+@define-color teal              #73daca; /* Object literal keys, Markdown links, Terminal Green */
+@define-color light_blue        #b4f9f8; /* Regex literal strings */
+@define-color blue              #2ac3de; /* Language functions, HTML elements */
+@define-color cyan              #7dcfff; /* Object props, Regex quantifiers, Markdown code */
+@define-color blue_alt          #7aa2f7; /* Function names, CSS properties */
+@define-color magenta           #bb9af7; /* Control keywords, storage types, HTML attributes */
+@define-color white             #c0caf5; /* Variables, class names */
+@define-color fg_primary        #a9b1d6; /* Editor foreground */
+@define-color text_soft         #9aa5ce; /* Markdown text, HTML text */
+@define-color comment           #565f89; /* Comments */
+@define-color terminal_black    #414868; /* Terminal black */
+@define-color bg_storm          #24283b; /* Editor background (storm) */
+@define-color bg_night          #1a1b26; /* Editor background (night) */
+
+* {
+    font-family: "JetBrains Mono Nerd Font", monospace;
+    font-size: 17px;
+}
+
+window {
+    margin: 0px;
+    padding: 15px;
+    border: 3px solid @blue_alt;
+    border-radius: 8px;
+    background-color: @bg_night;
+    transition: transform 1s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+#inner-box {
+    margin: 5px;
+    padding: 15px;
+    border: none;
+    background-color: @bg_night;
+}
+
+#outer-box {
+    margin: 5px;
+    padding: 15px;
+    border: none;
+    background-color: @bg_night;
+}
+
+#text {
+    margin: 5px;
+    color: @white;
+}
+
+#text:selected {
+    color: @blue_alt;
+    font-weight: 500;
+}
+
+#entry:selected {
+    background-color: @bg_night;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 0.11rem solid @blue_alt;
+    padding-left: 4px;
+}
+
+#entry {
+    background-color: @bg_night;
+}
+
+#entry arrow {
+    color: @blue_alt;
+    font-weight: normal;
+}
+
+#input {
+    margin: 5px 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 0.1em;
+    color: @white;
+    background-color: @bg_night;
+    outline: none;
+    box-shadow: none;
+}
+
+#input * {
+    color: @red !important;
+}
+
+#input image {
+    border: none;
+    color: @red;
+}
+
+#input * {
+    outline: 4px solid @red !important;
+}
+
+#input image {
+    border: none;
+    color: @red;
+}
+
+#entry image {
+    padding-right: 3px;
+    background-color: transparent;
+}
+
+#entry arrow {
+    border: none;
+    color: @blue_alt;
+}
+
+#scroll {
+    margin: 0px;
+    border: none;
+    display: none;
+}

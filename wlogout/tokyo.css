@@ -1,0 +1,18 @@
+@define-color red               #f7768e; /* Keywords, HTML elements, Regex groups, CSS units */
+@define-color orange            #ff9e64; /* Number and Boolean constants, Language support constants */
+@define-color yellow            #e0af68; /* Function parameters, Regex character sets */
+@define-color gray_param        #cfc9c2; /* Parameters inside functions (semantic) */
+@define-color green             #9ece6a; /* Strings, CSS class names */
+@define-color teal              #73daca; /* Object literal keys, Markdown links, Terminal Green */
+@define-color light_blue        #b4f9f8; /* Regex literal strings */
+@define-color blue              #2ac3de; /* Language functions, HTML elements */
+@define-color cyan              #7dcfff; /* Object props, Regex quantifiers, Markdown code */
+@define-color blue_alt          #7aa2f7; /* Function names, CSS properties */
+@define-color magenta           #bb9af7; /* Control keywords, storage types, HTML attributes */
+@define-color white             #c0caf5; /* Variables, class names */
+@define-color fg_primary        #a9b1d6; /* Editor foreground */
+@define-color text_soft         #9aa5ce; /* Markdown text, HTML text */
+@define-color comment           #565f89; /* Comments */
+@define-color terminal_black    #414868; /* Terminal black */
+@define-color bg_storm          #24283b; /* Editor background (storm) */
+@define-color bg_night          #1a1b26; /* Editor background (night) */

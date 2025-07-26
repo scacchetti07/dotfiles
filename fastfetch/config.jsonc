@@ -1,0 +1,118 @@
+//   _____ _____ _____ _____ _____ _____ _____ _____ _____
+//  |   __|  _  |   __|_   _|   __|   __|_   _|     |  |  |
+//  |   __|     |__   | | | |   __|   __| | | |   --|     |
+//  |__|  |__|__|_____| |_| |__|  |_____| |_| |_____|__|__|  HYPRLAND
+//
+//  by Bina
+
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    //  "source": "/home/scacchetti/.config/fastfetch/edgerunners.png",
+    "source": "fedora_small",
+    "height": 18,
+    "padding": {
+      "top": 8,
+      "left": 3,
+    },
+  },
+  "display": {
+    "separator": " ",
+  },
+  "modules": [
+    "break",
+    "break",
+    "break",
+    // {
+    //   "type": "custom",
+    //   "format": "\u001b[90m  \u001b[31m  \u001b[32m  \u001b[33m  \u001b[34m  \u001b[35m  \u001b[36m  \u001b[37m",
+    // },
+    "break",
+    {
+      "type": "title",
+      "keyWidth": 10,
+    },
+    {
+      "type": "custom",
+      //   "format": "\u001b[90m───────────────────────Software───────────────────────",
+      "format": "\u001b[90m──────────────────────────────────────────────────────",
+    },
+    "break",
+    {
+      "type": "os",
+      "key": "󰣛 ",
+      "keyColor": "blue", // = color4
+    },
+    {
+      "type": "kernel",
+      "key": " ",
+      "keyColor": "blue",
+    },
+    //  {
+    //    "type": "packages",
+    //    "format": "{} (dnf)",
+    //    "key": " ",
+    //    "keyColor": "blue",
+    //  },
+    {
+      "type": "shell",
+      "key": " ",
+      "keyColor": "blue",
+    },
+    {
+      "type": "terminal",
+      "key": " ",
+      "keyColor": "blue",
+    },
+    {
+      "type": "wm",
+      "key": " ",
+      "keyColor": "blue",
+    },
+    {
+      "type": "uptime",
+      "key": " ",
+      "keyColor": "blue",
+    },
+    "break",
+    //    {
+    //      "type": "custom",
+    // "format": "\u001b[90m───────────────────────Hardware───────────────────────",
+    //    },
+    {
+      "type": "cpu",
+      "format": "{1} ({3}) @ {7}",
+      "key": " ",
+      "keyColor": "magenta",
+    },
+    {
+      "type": "gpu",
+      "format": "{1} {2}",
+      "key": "󰢮 ",
+      "keyColor": "magenta",
+    },
+    {
+      "type": "memory",
+      "key": " ",
+      "keyColor": "magenta",
+    },
+    {
+      "type": "disk",
+      "key": "󰋊 ",
+      "keyColor": "magenta",
+    },
+    {
+      "type": "monitor",
+      "format": "{1} {11}hz - {2}x{3}",
+      "key": " ",
+      "keyColor": "magenta",
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "\u001b[90m  \u001b[31m  \u001b[32m  \u001b[33m  \u001b[34m  \u001b[35m  \u001b[36m  \u001b[37m",
+    },
+    "break",
+    "break",
+  ],
+}

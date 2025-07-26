@@ -1,0 +1,48 @@
+# Theme Base: https://github.com/tokyo-night/tokyo-night-vscode-theme
+
+# Main Colors
+unrecognized_file: '#c0caf5' #white1
+dir:               '#7dcfff' #light_blue
+executable_file:   '#9ece6a' #green
+recognized_file:   '#bb9af7' #purple
+
+# Link
+dead_link: red
+link:      cyan
+
+# special files
+socket:    green
+blockdev:  green
+chardev:   green
+
+# Access Modes
+write:     darkkhaki
+read:      limegreen
+exec:      red
+no_access: indianred
+
+# Age
+day_old:     mediumspringgreen
+hour_old:    '#ffa54f'
+no_modifier: seagreen
+
+# File Size
+file_large:  orange
+file_medium: gold
+file_small:  peachpuff
+
+# Random
+report: '#e0af68' #yellow
+user:   dodgerblue
+tree:   cyan
+empty:  '#ff9e64' #orange
+error:  '#f7768e' #red
+normal: darkkhaki
+inode: moccasin
+
+# Git
+addition:     chartreuse
+modification: darkkhaki
+deletion:     darkred
+untracked:    darkorange
+unchanged:    forestgreen

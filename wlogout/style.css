@@ -1,0 +1,124 @@
+/* Importing pywal colors */
+
+@define-color red               #f7768e; /* Keywords, HTML elements, Regex groups, CSS units */
+@define-color orange            #ff9e64; /* Number and Boolean constants, Language support constants */
+@define-color yellow            #e0af68; /* Function parameters, Regex character sets */
+@define-color gray_param        #cfc9c2; /* Parameters inside functions (semantic) */
+@define-color green             #9ece6a; /* Strings, CSS class names */
+@define-color teal              #73daca; /* Object literal keys, Markdown links, Terminal Green */
+@define-color light_blue        #b4f9f8; /* Regex literal strings */
+@define-color blue              #2ac3de; /* Language functions, HTML elements */
+@define-color cyan              #7dcfff; /* Object props, Regex quantifiers, Markdown code */
+@define-color blue_alt          #7aa2f7; /* Function names, CSS properties */
+@define-color magenta           #bb9af7; /* Control keywords, storage types, HTML attributes */
+@define-color white             #c0caf5; /* Variables, class names */
+@define-color fg_primary        #a9b1d6; /* Editor foreground */
+@define-color text_soft         #9aa5ce; /* Markdown text, HTML text */
+@define-color comment           #565f89; /* Comments */
+@define-color terminal_black    #414868; /* Terminal black */
+@define-color bg_storm          #24283b; /* Editor background (storm) */
+@define-color bg_night          #1a1b26; /* Editor background (night) */
+
+* {
+    background-image: none;
+    box-shadow: none;
+    text-shadow: none;
+    min-width: 100px;
+    min-height: 1rem;
+}
+
+window {
+    font-family: JetBrains Mono Nerd Font;
+    font-size: 18pt;
+    color: #c0caf5; /* text */
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+button {
+    transition: all 0.3s cubic-bezier(0.55, 0, 0.28, 1.682);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30%;
+    background-color: @bg_storm;
+    border-radius: 0px;
+    opacity: 0.8;
+    border: none;
+    box-shadow: none;
+    color: @white;
+    padding: 0px;
+    margin: 80px 0px;
+}
+
+button:focus,
+button:active,
+button:hover {
+    opacity: 1;
+    background-color: @blue_alt;
+    color: @bg_storm;
+    background-size: 60%;
+    font-weight: bold;
+    font-size: 2rem;
+    box-shadow: 0 8px 15px 5px rgba(122, 162, 247, 0.5);
+}
+
+/* Adjust the size of the icon or content inside the button */
+button span {
+    font-size: 2rem; /* Increase the font size */
+}
+
+#lock {
+    border-radius: 50px 0px 0px 50px;
+    background-image: image(url("./icons/lock.png"));
+}
+#lock:hover,
+#lock:active,
+#lock:focus {
+    background-image: image(url("./icons/lock-hover.png"));
+}
+
+#logout {
+    background-image: image(url("./icons/logout.png"));
+}
+#logout:hover,
+#logout:active,
+#logout:focus {
+    background-image: image(url("./icons/logout-hover.png"));
+}
+
+#suspend {
+    background-image: image(url("./icons/sleep.png"));
+}
+#suspend:hover,
+#suspend:active,
+#suspend:focus {
+    background-image: image(url("./icons/sleep-hover.png"));
+}
+
+#shutdown {
+    background-image: image(url("./icons/power.png"));
+}
+#shutdown:hover,
+#shutdown:focus,
+#shutdown:active {
+    background-image: image(url("./icons/power-hover.png"));
+}
+
+#reboot {
+    background-image: image(url("./icons/restart.png"));
+}
+#reboot:hover,
+#reboot:focus,
+#reboot:active {
+    /* animation: spin 1s linear infinite; */
+    background-image: image(url("./icons/restart-hover.png"));
+}
+
+#hibernate {
+    border-radius: 0px 50px 50px 0px;
+    background-image: image(url("./icons/hibernate.png"));
+}
+#hibernate:hover,
+#hibernate:focus,
+#hibernate:active {
+    background-image: image(url("./icons/sleep2.png"));
+}
